@@ -1,4 +1,4 @@
-# **SRMC: Synergy Route Mirror-duos Conflux Method for Class-agnostic Counting**
+# **SRDA: Synergy Route Dual-stream Attention Method for Class-agnostic Counting**
 
 ## Setup
 
@@ -34,7 +34,6 @@ CUDA_VISIBLE_DEVICES=0,1 torchrun --nproc_per_node=2 train.py --pre_norm
 # single-GPU:
 CUDA_VISIBLE_DEVICES=0 torchrun --nproc_per_node=1 train.py --pre_norm
 ```
-
 ### zero-shot
 
 ```
@@ -46,7 +45,6 @@ CUDA_VISIBLE_DEVICES=0 torchrun --nproc_per_node=1 train.py --zero_shot --pre_no
 
 
 ## Evaluation
-
 ### FSC-147
 
 #### few-shot
@@ -54,7 +52,6 @@ CUDA_VISIBLE_DEVICES=0 torchrun --nproc_per_node=1 train.py --zero_shot --pre_no
 ```
 CUDA_VISIBLE_DEVICES=0 torchrun --nproc_per_node=1 evaluate.py --model_name MMFA150_3_2shot --backbone resnet50 --swav_backbone --reduction 8 --image_size 512 --num_enc_layers 3 --num_ope_iterative_steps 3 --emb_dim 256 --num_heads 8 --kernel_dim 3 --num_objects 3 --pre_norm 
 ```
-
 #### zero_shot
 
 ```
